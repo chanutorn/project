@@ -1,0 +1,104 @@
+/* ไฟล์ CSS */
+/* สไตล์สำหรับคอนเทนเนอร์ของการ์ด */
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* อนุญาตให้การ์ดกลับบรรทัดเมื่อมีขนาดหน้าจอไม่พอ */
+  max-width: auto;
+  margin: auto;
+}
+
+.custom-col {
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card {
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s, transform 0.3s; /* เพิ่ม transition เพื่อให้มีอนิเมชันเมื่อเปลี่ยนแปลง */
+}
+
+.card:hover {
+  border: 2px solid #2e86c1; /* เปลี่ยนสีขอบเมื่อ Hover */
+  transform: scale(0.95); /* ลดขนาดเมื่อ Hover */
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.card-header a img {
+  width: 140px;
+  height: 170px;
+  border-radius: 8px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.product-name {
+  color: #333;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+
+.product-name:hover{
+  text-decoration: none;
+  font-weight: bold;
+  color: #2e86c1;
+}
+
+.ellipsis-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bag {
+  color: #2196F3;
+}
+
+@media (max-width: 1060px) {
+  .custom-col {
+    width: 33%;
+  }
+}
+
+@media (max-width: 765px) {
+  .custom-col {
+    width: 50%;
+    padding: 10px 25px;
+  }
+
+  .card-header a img {
+    width: 160px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 535px) {
+  .card-header a img {
+    width: 140px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 435px) {
+  .card-header a img {
+    width: 100px;
+    height: 140px;
+  }
+}

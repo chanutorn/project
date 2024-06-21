@@ -1,0 +1,195 @@
+/* .top-container {
+  padding-top: 40px;
+} */
+
+.button-container {
+  padding: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0px;
+  background: transparent;
+  position: relative;
+  margin-top: 20px;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 0 0 auto;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #333;
+  /* overflow: hidden; */
+  text-align: center;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  width: 10px;
+  height: 5px;
+  background: #333;
+  left: 50%;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+}
+
+.btn:hover {
+  color: #333; /* ตั้งค่าสีของตัวอักษรเมื่อ hover เป็นสีขาว */
+}
+
+.btn:hover::after {
+  width: 100%;
+  background: #333;
+  color: #333;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0px;
+  background: transparent;
+  position: relative;
+  margin: 20px;
+  transition: all 0.25s ease;
+}
+
+.btn-search {
+  overflow: hidden;
+  color: #333;
+  border-radius: 30px;
+  box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, 0.5),
+    0px 0px 0px 0px rgba(39, 200, 255, 0.5);
+}
+
+.btn-search:hover {
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25),
+    -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
+
+.btn-search:hover::after {
+  transform: rotate(150deg);
+}
+
+.btn-search::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #27d86c 0%,
+    #26caf8 50%,
+    #c625d0 100%
+  );
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 560px) {
+  .button-container .btn {
+    font-size: 0.8rem; /* ปรับขนาดของปุ่มเป็น 0.8rem */
+    padding: 10px 20px; /* ปรับความกว้างและความสูงของปุ่ม */
+  }
+  /* เพิ่มความกว้างของปุ่ม */
+  .btn {
+    font-size: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; /* ปรับความกว้างและความสูงของปุ่ม */
+  }
+
+  /* เพิ่มความกว้างของปุ่มค้นหา */
+  .btn-search {
+    font-size: 0.9rem;
+    width: 120px; /* ปรับความกว้างของปุ่มค้นหา */
+  }
+
+  /* ปรับความกว้างและระยะห่างของช่องค้นหา */
+  .form-control {
+    width: 100%; /* ปรับความกว้างของช่องค้นหาให้เต็มความกว้าง */
+    max-width: 130px; /* จำกัดความกว้างสูงสุดของช่องค้นหา */
+    margin-right: 5px; /* ปรับระยะห่างด้านขวาของช่องค้นหา */
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  /* เพิ่มความกว้างของปุ่มค้นหา */
+  .btn-search {
+    font-size: 0.75rem;
+    width: 80px; /* ปรับความกว้างของปุ่มค้นหา */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* ปรับความกว้างและระยะห่างของช่องค้นหา */
+  .form-control {
+    width: 100%; /* ปรับความกว้างของช่องค้นหาให้เต็มความกว้าง */
+    max-height: 35px;
+    max-width: 130px; /* จำกัดความกว้างสูงสุดของช่องค้นหา */
+    font-size: 0.8rem;
+  }
+  .button-container .btn {
+    font-size: 0.75rem; /* เปลี่ยนค่า font-size เป็นค่าที่ต้องการ เช่น 0.8rem, 0.7rem, เป็นต้น */
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  /* เพิ่มความกว้างของปุ่มค้นหา */
+  .btn-search {
+    font-size: 0.7rem;
+    width: 80px; /* ปรับความกว้างของปุ่มค้นหา */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* ปรับความกว้างและระยะห่างของช่องค้นหา */
+  .form-control {
+    width: 100%; /* ปรับความกว้างของช่องค้นหาให้เต็มความกว้าง */
+    max-width: 120px; /* จำกัดความกว้างสูงสุดของช่องค้นหา */
+    font-size: 0.75rem;
+  }
+  .button-container .btn {
+    font-size: 0.7rem; /* เปลี่ยนค่า font-size เป็นค่าที่ต้องการ เช่น 0.8rem, 0.7rem, เป็นต้น */
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  /* เพิ่มความกว้างของปุ่มค้นหา */
+  .btn-search {
+    font-size: 0.7rem;
+    width: 80px; /* ปรับความกว้างของปุ่มค้นหา */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* ปรับความกว้างและระยะห่างของช่องค้นหา */
+  .form-control {
+    width: 100%; /* ปรับความกว้างของช่องค้นหาให้เต็มความกว้าง */
+    max-width: 120px; /* จำกัดความกว้างสูงสุดของช่องค้นหา */
+    font-size: 0.7rem;
+  }
+  .button-container .btn {
+    font-size: 0.6rem; /* เปลี่ยนค่า font-size เป็นค่าที่ต้องการ เช่น 0.8rem, 0.7rem, เป็นต้น */
+  }
+}

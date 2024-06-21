@@ -1,0 +1,57 @@
+.f-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.box {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text {
+  line-height: 1.6;
+  font-size: 1em;
+  color: #333;
+}
+
+.text h2 {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.text ul li {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.text ul li strong {
+  color: #333;
+}
+
+.text p {
+  margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+  .f-container {
+    padding: 10px;
+  }
+
+  .box {
+    font-size: 1em;
+  }
+
+  .text {
+    font-size: 0.9em;
+  }
+}
